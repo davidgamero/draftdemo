@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: draftdemo
+  name: draftdemo
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: draftdemo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: draftdemo
+    spec:
+      containers:
+      - image: .azurecr.io/
+        name: draftdemo
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
