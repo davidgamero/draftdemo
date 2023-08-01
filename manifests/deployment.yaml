@@ -19,7 +19,7 @@ spec:
         app: draftdemo
     spec:
       containers:
-      - image: .azurecr.io/
+      - image: drafttest.azurecr.io/draftdemo
         name: draftdemo
         ports:
         - containerPort: 8080
