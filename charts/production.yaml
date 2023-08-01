@@ -1,5 +1,5 @@
 image:
-    repository: .azurecr.io/
+    repository: drafttest.azurecr.io/helmapp
     pullPolicy: IfNotPresent
     tag: latest
 service:
