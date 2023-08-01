@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: manifestapp
+  name: draftdemo
   namespace: default
 spec:
   type: LoadBalancer
   selector:
-    app: manifestapp
+    app: draftdemo
   ports:
     - protocol: TCP
       port: 8080

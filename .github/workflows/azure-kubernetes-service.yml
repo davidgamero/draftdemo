@@ -36,10 +36,10 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: drafttest
-  CONTAINER_NAME: manifestimage
+  CONTAINER_NAME: draftdemo
   RESOURCE_GROUP: drafttest
   CLUSTER_NAME: drafttest
-  DEPLOYMENT_MANIFEST_PATH: ./manifests/deployment.yaml,./manifests/service.yaml
+  DEPLOYMENT_MANIFEST_PATH: ./manifests/deployment.yaml
   BUILD_CONTEXT_PATH: .
 
 jobs:
@@ -99,8 +99,6 @@ jobs:
           use-kubelogin: 'true'
 
       # Deploys application based on given manifest  file
-      - run: ls
-      - run: ls ./manifests
       - name: Deploys application
         uses: Azure/k8s-deploy@v4
         with:
