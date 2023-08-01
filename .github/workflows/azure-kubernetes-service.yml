@@ -39,7 +39,7 @@ env:
   CONTAINER_NAME: manifestimage
   RESOURCE_GROUP: drafttest
   CLUSTER_NAME: drafttest
-  DEPLOYMENT_MANIFEST_PATH: ./manifests/deployment.yaml,.manifests/service.yaml
+  DEPLOYMENT_MANIFEST_PATH: ./manifests/deployment.yaml,./manifests/service.yaml
   BUILD_CONTEXT_PATH: .
 
 jobs:
