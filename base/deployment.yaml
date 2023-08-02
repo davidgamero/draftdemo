@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krustyapp
+  labels:
+    app: krustyapp
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: krustyapp
+  template:
+    metadata:
+      labels:
+        app: krustyapp
+    spec:
+      containers:
+        - name: krustyapp
+          image: krustyapp:latest
+          ports:
+            - containerPort: 8080

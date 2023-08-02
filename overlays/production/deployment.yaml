@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: krustyapp
+  labels:
+    app: krustyapp
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: krustyapp
+  template:
+    spec:
+      containers:
+        - name: krustyapp
+          image: krustyapp:latest
