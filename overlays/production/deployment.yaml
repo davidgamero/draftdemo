@@ -1,16 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: krustyapp
+  creationTimestamp: null
   labels:
     app: krustyapp
+  name: krustyapp
   namespace: default
 spec:
   selector:
     matchLabels:
       app: krustyapp
+  strategy: {}
   template:
+    metadata:
+      creationTimestamp: null
     spec:
       containers:
-        - name: krustyapp
-          image: krustyapp:latest
+      - image: drafttest.azurecr.io/drafttest
+        name: krustyapp
+        resources: {}
+status: {}

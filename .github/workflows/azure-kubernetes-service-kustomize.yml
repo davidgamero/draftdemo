@@ -40,7 +40,7 @@ on:
 
 env:
   AZURE_CONTAINER_REGISTRY: drafttest
-  CONTAINER_NAME: krustyapp
+  CONTAINER_NAME: drafttest
   RESOURCE_GROUP: drafttest
   CLUSTER_NAME: drafttest
   KUSTOMIZE_PATH: ./overlays/production
