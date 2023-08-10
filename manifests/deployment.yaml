@@ -1,27 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
+  name: davidgamero-test
   labels:
-    app: draftdemo
-  name: draftdemo
-  namespace: default
+    app: davidgamero-test
+  namespace: namespace-workflow-1691679642421
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: draftdemo
-  strategy: {}
+      app: davidgamero-test
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: draftdemo
+        app: davidgamero-test
     spec:
       containers:
-      - image: drafttest.azurecr.io/draftdemo
-        name: draftdemo
-        ports:
-        - containerPort: 8080
-        resources: {}
-status: {}
+        - name: davidgamero-test
+          image: acrworkflow1691679642421.azurecr.io/image-workflow-1691679642421:latest
+          ports:
+            - containerPort: 8080
